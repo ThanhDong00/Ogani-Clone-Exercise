@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OganiClone")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c4e151483decd34d5bf4c4d52f1c2d9de0da31f0")]
 [assembly: System.Reflection.AssemblyProductAttribute("OganiClone")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OganiClone")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

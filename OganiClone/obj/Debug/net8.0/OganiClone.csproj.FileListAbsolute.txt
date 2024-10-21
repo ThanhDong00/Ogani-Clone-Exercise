@@ -259,3 +259,4 @@ C:\Users\thanh\source\repos\OganiClone\OganiClone\bin\Debug\net8.0\runtimes\win\
 C:\Users\thanh\source\repos\OganiClone\OganiClone\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Users\thanh\source\repos\OganiClone\OganiClone\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\thanh\source\repos\OganiClone\OganiClone\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\thanh\source\repos\OganiClone\OganiClone\obj\Debug\net8.0\OganiClone.sourcelink.json

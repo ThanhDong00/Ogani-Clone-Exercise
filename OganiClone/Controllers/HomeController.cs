@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using OganiClone.Models;
+using OganiClone.Models.Authentication;
+using OganiClone.ViewModels;
 using System.Diagnostics;
 using X.PagedList;
 
@@ -12,10 +14,13 @@ namespace OganiClone.Controllers
 
         private readonly ILogger<HomeController> _logger;
 
+
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
         }
+
+        [Authentication]
 
         public IActionResult Index(int? page)
         {
@@ -39,6 +44,29 @@ namespace OganiClone.Controllers
             ViewBag.maloai = maloai;
 
             return View(list);
+        }
+
+        //Hien thi chi tiet san pham
+        public IActionResult ChiTietSanPham(string maSP)
+        {
+            var sanPham = db.TDanhMucSps.SingleOrDefault(x => x.MaSp == maSP);
+            var anhSanPham = db.TAnhSps.Where(x => x.MaSp == maSP).ToList();
+            ViewBag.anhSanPham = anhSanPham;
+            return View(sanPham);
+        }
+
+        public IActionResult ProductDetail(string maSP)
+        {
+            var sanPham = db.TDanhMucSps.SingleOrDefault(x => x.MaSp == maSP);
+            var anhSanPham = db.TAnhSps.Where(x => x.MaSp == maSP).ToList();
+            var homeProductDetailViewModel = new HomeProductDetailViewModel
+            {
+                danhMucSp = sanPham,
+                anhSp = anhSanPham
+            };
+
+
+            return View(homeProductDetailViewModel);
         }
 
         public IActionResult Privacy()

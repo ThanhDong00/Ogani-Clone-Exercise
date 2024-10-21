@@ -17,6 +17,7 @@ namespace OganiClone
             builder.Services.AddDbContext<QlbanVaLiContext>(x => x.UseSqlServer(connectionString));
 
             builder.Services.AddScoped<ILoaiSpRepository, LoaiSpRepository>();
+            builder.Services.AddSession();
 
             var app = builder.Build();
 
@@ -34,10 +35,11 @@ namespace OganiClone
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseSession();
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Access}/{action=Login}/{id?}");
 
             app.Run();
         }
